@@ -4,11 +4,12 @@ function oddFriend(friends){
         
         
         if(friend.length%2!=0){
-            console.log(friend);
+            return friend;
             break;
         }
     }
 }
 
 const allFriends=['abdur jabbar','kuddus','modhu','kodu'];
-oddFriend(allFriends);
+const oddFrTest=oddFriend(allFriends);
+console.log(oddFrTest);
