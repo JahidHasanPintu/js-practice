@@ -34,7 +34,11 @@
         // another direct try 
         document.getElementById('alert-update').addEventListener('click',function(){
             const p=document.getElementById('name-text');
+            const testp=document.getElementById('click-test');
+            testp.innerText='You have typed '+p.value;
+
             alert("You have typed: "+p.value);
+            p.value='';
         })
     </script>
 </body>
