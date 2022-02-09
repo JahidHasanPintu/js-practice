@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event common</title>
 </head>
 <body>
+    <p id="click-test"></p>
+    <button onclick="functionHandleClick()">Using Function</button>
     
+    
+    <button id="handle-event">Using event listener</button>
+
+
+    <!-- input text try  -->
+    <input type="text" name="Enter name" id="name-text">
+    <button type="submit" id="alert-update">Show Alert</button>
+
+    <script>
+        // using function here
+        function functionHandleClick(){
+            const p=document.getElementById('click-test');
+            p.innerText='Wow thats done by function';
+        }
+        // using event listener 
+        document.getElementById('handle-event').addEventListener('click',function(){
+            const p=document.getElementById('click-test');
+            p.innerText='Wow thats done event listener';
+        }
+        )
+
+        // another direct try 
+        document.getElementById('alert-update').addEventListener('click',function(){
+            const p=document.getElementById('name-text');
+            alert("You have typed: "+p.value);
+        })
+    </script>
 </body>
 </html>
