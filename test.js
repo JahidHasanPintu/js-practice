@@ -1,21 +1,15 @@
-function compare(a, b) {
-    if (a.toString() === b) {
-     return true;
-    } else {
-     return false;
+let freindsNames = ["fazlay", 'pintus', 'sayem', 'fahim', 'parvez'];
+function oddFreind(freindsNames) {
+    // input handle for object
+    if (typeof freindsNames != "object") {
+        return "please give a string array";
     }
-   }
-   
-   const result = compare(25, 25);
-   console.log(result);
-
-   console.log("123" + 123);
-
-   const array = [1, 2, 3, 4, 5, 6, 7];
-
-for (let i = 1; i < array.length; i++) {
- if (i == 5) {
-  continue;
- }
- console.log(array[i]);
+    for (let i = 0; i < freindsNames.length; i++) {
+        if (freindsNames[i].length % 2 != 0) {
+        let myFriend = freindsNames[i];
+        return myFriend;
+        }
+    }
 }
+let freind = oddFreind(freindsNames);
+console.log(freind);
